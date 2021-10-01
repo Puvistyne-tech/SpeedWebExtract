@@ -1,0 +1,240 @@
+webpackHotUpdate("main",{
+
+/***/ "./src/components/data/Data.js":
+/*!*************************************!*\
+  !*** ./src/components/data/Data.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils_source__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/source */ "./src/components/utils/source.js");
+/* harmony import */ var react_loading__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-loading */ "./node_modules/react-loading/dist/react-loading.js");
+/* harmony import */ var react_loading__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_loading__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _grid_Grids__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../grid/Grids */ "./src/components/grid/Grids.js");
+var _jsxFileName = "D:\\Stage\\Banque de France\\Travail\\BdF\\v1\\src\\components\\data\\Data.js";
+
+
+
+
+
+
+const Data = props => {
+  const [loading, setLoading] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
+  const nom = props.nom;
+  const dataName = props.dataName || "Aucune donnée, Veuillez actualiser";
+  const url = props.url;
+  const id = props.$;
+  const date = props.date;
+  const prepared = props.prepared || "";
+
+  const handleRefresh = async () => {
+    setLoading(true);
+    let res = await Object(_utils_source__WEBPACK_IMPORTED_MODULE_1__["getData"])(nom, url); // console.log(res)
+
+    let [dataName, prepared, date, columnDefs, rowData] = res;
+    let info = {
+      date: date,
+      dataName: dataName,
+      prepared: prepared
+    };
+    props.updateSource(id, columnDefs, rowData, info);
+    props.updateBdfData();
+    setLoading(false);
+  };
+
+  const handleOneDataClick = () => {
+    props.lanceGrid({
+      $: id
+    });
+  };
+
+  const [showGrid, setShowGrid] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])();
+  const [gridName, setGridName] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
+
+  const handleOpenGrid = () => {
+    setGridName(nom);
+    setShowGrid(true);
+  };
+
+  const closeGrid = () => {
+    setShowGrid(false);
+    setGridName("");
+  };
+
+  if (showGrid) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grid_Grids__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      closeGrid: closeGrid,
+      columnDefs: props.columnDefs,
+      rowData: props.rowData,
+      activeGridName: gridName,
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51,
+        columnNumber: 7
+      }
+    });
+  } else {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60,
+        columnNumber: 7
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      className: "flex-even list-group-item bd-highlight p-2 ",
+      style: {
+        width: ""
+      },
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61,
+        columnNumber: 9
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "d-flex flex-row justify-content-between align-items-stretch",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 65,
+        columnNumber: 11
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 66,
+        columnNumber: 13
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "" // onClick={handleOneDataClick}
+      ,
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 67,
+        columnNumber: 15
+      }
+    }, dataName + " " + prepared), props.dataName && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "  text-muted small",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 74,
+        columnNumber: 17
+      }
+    }, "Derni\xE8re mise \xE0 jour : ", date), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 79,
+        columnNumber: 15
+      }
+    }, !loading || /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "spinner-grow fast text-danger m-1",
+      role: "status",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 81,
+        columnNumber: 19
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "sr-only",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 85,
+        columnNumber: 21
+      }
+    }, "Loading...")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "d-flex flex-row align-self-stretch mt-2",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 90,
+        columnNumber: 13
+      }
+    }, Boolean(props.dataName) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      onClick: handleOneDataClick,
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 92,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "p-1 fas fa-th green-text",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 93,
+        columnNumber: 19
+      }
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 97,
+        columnNumber: 15
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: url,
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 98,
+        columnNumber: 17
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "p-1 fab fa-internet-explorer blue-text",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 99,
+        columnNumber: 19
+      }
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 103,
+        columnNumber: 15
+      }
+    }, loading || /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      onClick: handleRefresh,
+      className: "p-1 fas fa-redo red-text text-muted",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 105,
+        columnNumber: 19
+      }
+    }), !loading || /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      onClick: () => {
+        setLoading(false);
+      },
+      className: "p-1 fas fa-times red-text",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 111,
+        columnNumber: 19
+      }
+    }))))));
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Data);
+
+/***/ })
+
+})
+//# sourceMappingURL=main.bbb506b484e227bef1fa.hot-update.js.map
