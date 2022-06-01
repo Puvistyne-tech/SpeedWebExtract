@@ -1,4 +1,4 @@
-# SpeedWebExtract - SWE
+# Speed Web Extract - SWE
 Un site web Prototype
 C'est un prototype d'extraction des données pour la Banque de France.
 
