@@ -18,7 +18,7 @@ Fonctionalités
 2. Sauvegardé les modification ou filtre des données - ``Enregistrer``
 3. Importer des données - url, xml, json, api, csv - ``Ouviri``
 4. Importer les modification ou filtres - ``Créer une table -> Browse``
-5. Créer des graphs - séléctioner les données pour -> bouton droite -> ``Chart Range`` 
+5. Créer des graphs - séléctioner les données -> bouton droite -> ``Chart Range`` 
 6. sauvegarder les graphes dans plusieurs formats - séléctioner les données -> ``Export``
 7. Trier des données 
 8. Filtrer des données
