@@ -14,18 +14,19 @@ vous pouvez l'utiliser pour tester SWE et ses fonctionalités
 ``Menu`` -> ``Ouvrir`` pour importer **SpeedWebExtract_jeudi 18 février 2021_14_37_17.json** dans SWE
 
 Fonctionalités
-1. Sauvegardé des données dans plusieurs formats - ``Télécharger la sélection`` ou ``Sauvegarder``
-2. Sauvegardé les modification ou filtre des données - ``Sauvegarder``
+1. Sauvegardé des données dans plusieurs formats - ``Télécharger la sélection`` ou ``Enregistrer``
+2. Sauvegardé les modification ou filtre des données - ``Enregistrer``
 3. Importer des données - url, xml, json, api, csv - ``Ouviri``
 4. Importer les modification ou filtres - ``Créer une table -> Browse``
-5. Créer des graphs - séléctioner les données pour -> bouton droite -> créer des graphes 
-6. sauvegarder les graphes dans plusieurs formats - séléctioner les données -> save
+5. Créer des graphs - séléctioner les données pour -> bouton droite -> ``Chart Range`` 
+6. sauvegarder les graphes dans plusieurs formats - séléctioner les données -> ``Export``
 7. Trier des données 
 8. Filtrer des données
 9. Filtrage Mode Avancé - tab ``Filters``, ``Columns``
 10. Affichage des données - Appuyer sur le nom des Banques pour afficher ses données
 11. Conversion des données en SDMX - Automatique
 12. Merger toutes les données - Automatique
+13. Changer le thème pour une meilleur visualisation
 
 * Appuyer sur le nom pour acceder ses données 
 * Appuyer sur ``ALL`` pour acceder toutes les données
