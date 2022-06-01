@@ -34,4 +34,4 @@ Fonctionalités
 
 # Utilisation
 Télécharger ou cloner tous les fichiers et lancer ``ìndex.html`` avec Google Chrome (Conseillé).
-Et puis importer le json ``**SpeedWebExtract_week date month xxxx_xx_xx.json`` pour commencer OU télécharger directement à partir les liens qui sont déjà inclu dans l'application en appuyant ``refresh`` <img src="./refresh.png" alt="refresh" />. 
+Et puis importer le json ``**SpeedWebExtract_week date month xxxx_xx_xx.json`` pour commencer OU télécharger directement à partir les liens qui sont déjà inclu dans l'application en appuyant sur ``refresh`` <img src="./refresh.png" alt="refresh" />. 
