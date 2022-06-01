@@ -28,4 +28,4 @@ Fonctionalités
 12. Merger toutes les données
 
 * Appuyer sur le nom pour acceder ses données 
-* Appuyer sur ``BDF`` pour acceder toutes les données
+* Appuyer sur ``ALL`` pour acceder toutes les données
